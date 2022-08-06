@@ -1,4 +1,4 @@
-package com.hrndzl.musikverwaltung_mit_gui;
+package com.hrndzl.musikverwaltung;
 
 import java.util.Comparator;
 

@@ -1,18 +1,20 @@
-package com.hrndzl.musikverwaltung_mit_gui;
+package com.hrndzl.musikverwaltung;
 
 public class Song {
-    public Song() {}
-
-    public Song(String name, int dauerInSekunden, int nummer) {
-        this.name = name;
-        this.dauerInSekunden = dauerInSekunden;
-        this.nummer = nummer;
-    }
-
     private String name;
     private int dauerInSekunden;
     private int nummer;
+    private String songText;
     public Album inAlbum;
+
+    public Song() {}
+
+    public Song(String name, int dauerInSekunden, int nummer, String songText) {
+        this.name = name;
+        this.dauerInSekunden = dauerInSekunden;
+        this.nummer = nummer;
+        this.songText = songText;
+    }
 
     public String getName() {
         return name;
@@ -38,7 +40,11 @@ public class Song {
         this.nummer = nummer;
     }
 
-    public String getDauerString() {
-        return String.valueOf(this.dauerInSekunden / 60);
+    public String getSongText() {
+        return songText;
+    }
+
+    public void setSongText(String songText) {
+        this.songText = songText;
     }
 }

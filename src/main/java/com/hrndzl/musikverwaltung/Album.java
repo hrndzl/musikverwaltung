@@ -1,4 +1,4 @@
-package com.hrndzl.musikverwaltung_mit_gui;
+package com.hrndzl.musikverwaltung;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +8,7 @@ public class Album {
     private Interpret interpret;
     private int albumLaengeInSekunden = 0;
     private int titelAnzahl = 0;
-    private ArrayList<Song> inhalt = new ArrayList<Song>();
+    private ArrayList<Song> inhalt = new ArrayList<>();
 
     public Album() {}
 
@@ -19,10 +19,6 @@ public class Album {
 
     public ArrayList<Song> getInhalt() {
         return inhalt;
-    }
-
-    public void setInhalt(ArrayList<Song> inhalt) {
-        this.inhalt = inhalt;
     }
 
     public Interpret getInterpret() {
@@ -66,19 +62,10 @@ public class Album {
     }
 
     public String gesamtDauerString() {
-        return String.valueOf(this.getAlbumLaengeInSekunden() / 60) + " Minuten, " + String.valueOf(this.getAlbumLaengeInSekunden() % 60) + " Sekunden";
+        return String.valueOf(getAlbumLaengeInSekunden() / 60) + " Minuten, " + String.valueOf(this.getAlbumLaengeInSekunden() % 60) + " Sekunden";
     }
 
     public void sortSongs() {
         Collections.sort(inhalt, new SortSongs());
-    }
-
-    public void ausgeben() {
-        System.out.println("Name: " + this.getName());
-        System.out.println("Interpret: " + this.getInterpret().getName());
-        for(Song song : inhalt) {
-            System.out.println(song.getNummer() + ": " + song.getName());
-        }
-        System.out.println("Länge: " + this.getAlbumLaengeInSekunden());
     }
 }

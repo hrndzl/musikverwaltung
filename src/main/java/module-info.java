@@ -3,6 +3,8 @@ module com.example.musikverwaltung_mit_gui {
     requires javafx.fxml;
 
 
-    opens com.hrndzl.musikverwaltung_mit_gui to javafx.fxml;
-    exports com.hrndzl.musikverwaltung_mit_gui;
+    opens com.hrndzl.musikverwaltung to javafx.fxml;
+    exports com.hrndzl.musikverwaltung;
+    exports com.hrndzl.musikverwaltung.ui;
+    opens com.hrndzl.musikverwaltung.ui to javafx.fxml;
 }

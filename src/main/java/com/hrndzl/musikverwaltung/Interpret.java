@@ -1,11 +1,11 @@
-package com.hrndzl.musikverwaltung_mit_gui;
+package com.hrndzl.musikverwaltung;
 
 import java.util.ArrayList;
 
 public class Interpret {
     private String name;
     private String biografie;
-    private ArrayList<Album> alben = new ArrayList<Album>();
+    private ArrayList<Album> alben = new ArrayList<>();
 
     public Interpret() {
     }
@@ -33,9 +33,5 @@ public class Interpret {
 
     public ArrayList<Album> getAlben() {
         return alben;
-    }
-
-    public void setAlben(ArrayList<Album> alben) {
-        this.alben = alben;
     }
 }
